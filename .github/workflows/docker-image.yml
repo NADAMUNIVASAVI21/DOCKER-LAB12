@@ -29,8 +29,8 @@ jobs:
       - name: Build and Push Backend Image
         uses: docker/build-push-action@v6
         with:
-          context: ./springbootbackend
-          file: ./springbootbackend/backend.Dockerfile
+          context: ./CAKEAPI-SPRINGBOOT
+          file: ./CAKEAPI-SPRINGBOOT/backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/lab12-backend:latest
 
@@ -38,7 +38,7 @@ jobs:
       - name: Build and Push Frontend Image
         uses: docker/build-push-action@v6
         with:
-          context: ./reactfrontend
-          file: ./reactfrontend/frontend.Dockerfile
+          context: ./CAKEAPI-REACT
+          file: ./CAKEAPI-REACT/frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/lab12-frontend:latest
